@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CraftService } from '../services/craft.service';
 
 @Component({
   selector: 'app-crafts',
@@ -6,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crafts.component.scss']
 })
 export class CraftsComponent implements OnInit {
-  crafts = [
-    { name: "Domek", author: "Janek"},
-    { name: "Lalka", author: "Ania"}
-  ]
+  crafts: any[];
 
-  constructor() { }
+  constructor(private service: CraftService) { }
 
   ngOnInit() {
+    this.service.getMainPageCrafts().subscribe(response => {
+      this.crafts = response.json().crafts;
+    });
   }
 
 }
