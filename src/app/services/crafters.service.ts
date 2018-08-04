@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 
 @Injectable()
 export class CraftersService {
-  private urlPopularCrafters = environment.apiUrl + "crafters/popular";
+  private urlPopularCrafters = environment.apiUrl + "crafters/popular/";
 
   constructor(private http: Http) { }
 

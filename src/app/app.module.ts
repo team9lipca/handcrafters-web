@@ -12,8 +12,6 @@ import { CraftService } from './services/craft.service';
 import { CraftersService } from './services/crafters.service';
 
 const routes: Routes = [
-  //{ path: 'crisis-center', component: CrisisListComponent },
-  //{ path: 'hero/:id',      component: HeroDetailComponent },
   {
     path: 'home',
     component: HomeComponent,
@@ -27,8 +25,7 @@ const routes: Routes = [
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
-  },
-  //{ path: '**', component: PageNotFoundComponent }
+  }
 ];
 
 @NgModule({
